@@ -15,8 +15,8 @@ return [
     |
     */
 
-    'default' => env('CACHE_STORE', 'database'),
-
+    'default' => env('CACHE_STORE', 'array'),
+    'default' => env('CACHE_DRIVER', 'array'),
     /*
     |--------------------------------------------------------------------------
     | Cache Stores
