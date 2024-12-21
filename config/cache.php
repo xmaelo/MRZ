@@ -15,9 +15,9 @@ return [
     |
     */
 
-    'default' => env('CACHE_STORE', 'array'),
-    'default' => env('CACHE_DRIVER', 'array'),
-    'driver' => 'array',
+    'default' => env('CACHE_STORE', 'file'),
+    'default' => env('CACHE_DRIVER', 'file'),
+    'driver' => 'file',
     /*
     |--------------------------------------------------------------------------
     | Cache Stores
@@ -49,8 +49,8 @@ return [
 
         'file' => [
             'driver' => 'file',
-            'path' => storage_path('framework/cache/data'),
-            'lock_path' => storage_path('framework/cache/data'),
+            'path' => '/tmp/laravel_cache',
+            'lock_path' => '/tmp/laravel_cache',
         ],
 
         'memcached' => [
