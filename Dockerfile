@@ -19,8 +19,8 @@ RUN php artisan config:cache
 
 RUN echo "Caching routes..."
 RUN php artisan route:cache
-EXPOSE 8000
+EXPOSE 80
 
 # Start the Laravel application
-CMD ["php", "artisan", "serve", "--port=8000"]
+CMD ["php", "artisan", "serve", "--port=80"]
 
