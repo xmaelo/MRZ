@@ -9,7 +9,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 WORKDIR /app
 COPY . .
 
-RUN composer install --no-dev --working-dir=/var/www/html
+RUN composer install --no-dev 
 
 RUN echo "generating application key..."
 RUN php artisan key:generate --show
